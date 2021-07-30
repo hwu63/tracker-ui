@@ -90,6 +90,7 @@ class IssueEdit extends React.Component {
     });
   }
 
+  /* TM 3-13-20 */
   async handleSubmit(e) {
     e.preventDefault();
     this.showValidation();
@@ -298,7 +299,11 @@ class IssueEdit extends React.Component {
             <FormGroup>
               <Col smOffset={3} sm={6}>
                 <ButtonToolbar>
-                  <Button disabled={!user.signedIn} bsStyle="primary" type="submit">
+				<Button
+                    disabled={!user.signedIn}
+                    bsStyle="primary"
+                    type="submit"
+                  >
                     Submit
                   </Button>
                   <LinkContainer to="/issues">
